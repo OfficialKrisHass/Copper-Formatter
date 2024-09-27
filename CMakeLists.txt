@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.26)
 
-project(Copper-Formatter VERSION 0.1 LANGUAGES CXX)
+project(cformat VERSION 0.1 LANGUAGES CXX)
 
-add_executable(Copper-Formatter src/main.cpp)
+add_executable(cformat src/main.cpp)
 
-set_target_properties(Copper-Formatter PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build")
+set_target_properties(cformat PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build")

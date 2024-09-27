@@ -3,12 +3,11 @@
 cmake: CMakeLists.txt
 		@cmake . -B cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 
 
-build: build/Copper-Formatter
+build: cmake 
+		@${MAKE} --no-print-directory -C cmake -f Makefile
 
 run: build/Copper-Formatter
-		@./build/Copper-Formatter
-build/Copper-Formatter: cmake
-		@${MAKE} --no-print-directory -C cmake -f Makefile
+		@./build/cformat
 
 clean:
 		@rm -rf build
